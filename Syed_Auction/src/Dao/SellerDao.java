@@ -2,7 +2,7 @@ package Dao;
 
 import Exceptions.SellerException;
 
-public interface SellerDao {  
+public interface SellerDao  {  
 	
 	
 //	. Register himself or herself as seller.
