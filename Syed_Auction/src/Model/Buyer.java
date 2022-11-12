@@ -1,6 +1,8 @@
 package Model;
 
 public class Buyer { 
+	
+	
 	private int Buyerid;
 	private String name;
 	private String username;

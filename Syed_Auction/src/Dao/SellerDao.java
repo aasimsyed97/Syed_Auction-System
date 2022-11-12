@@ -1,6 +1,10 @@
 package Dao;
 
+import java.util.List;
+
 import Exceptions.SellerException;
+import Model.Items;
+import Model.Seller;
 
 public interface SellerDao  {  
 	
@@ -12,11 +16,11 @@ public interface SellerDao  {
 //	E. Remove items from the list.
 //	F. View the sold Item history. 
 	
-//	public String registSeller(Seller seller)throws SellerException; 
-    public void itemsforsell() throws SellerException;
-   // public String updateItemsForSell(int price, int quantity);
+	public String registerSeller(Seller seller)throws SellerException; 
+    public String itemsforsell(Items item) throws SellerException;
+    public String updateItemsForSell(int price, int quantity,int itemid)throws SellerException;
 // public String insertItemsForSell(int itemid, String name, String category, int quantity, int price, String status, int sellerid)throw SellerException;  
-// public void removeItemsForSell( )throws SellerException;	  
-	// public void soldItems() throws SellerException;
+      public String removeItemsForSell( int itemid)throws SellerException;	  
+	 public List<Items> soldItems(String status) throws SellerException;
    
 }
