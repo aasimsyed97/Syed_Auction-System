@@ -2,6 +2,9 @@ package Dao;
 
 import java.util.List;
 
+import Exceptions.AdminException;
+import Model.Buyer;
+
 public interface AdminDao { 
 	//. View the registered buyer list.
   // . View the registered Seller list.
@@ -9,7 +12,7 @@ public interface AdminDao {
 //. View the daily selling report.
 //Solve the dispute report.
    
-	 //public List<Buyers> ViewRegisteredBuyer();
+	 public List<Buyer> ViewRegisteredBuyer()throws AdminException;
 	 // public List<Sellers>ViewRegisteredSeller();
 	// public List<Dispute>ViewDailyDiputeReport();
     // public List<Report>viewDailyReportSelling();

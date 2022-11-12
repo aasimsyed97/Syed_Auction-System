@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 
-public class UTILITY {
+public class Utility {
 	
 
 	
@@ -24,7 +24,7 @@ public class UTILITY {
 			}
 			
 			
-			String url= "jdbc:mysql://localhost:3306/web20";
+			String url= "jdbc:mysql://localhost:3306/syed_auction_system";
 			
 			try {
 				conn = DriverManager.getConnection(url, "root", "13CE053@aasim");
