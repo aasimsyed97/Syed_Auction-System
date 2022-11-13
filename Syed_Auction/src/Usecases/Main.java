@@ -38,7 +38,7 @@ public class Main {
 		 
 		 System.out.println(" 1 for Admin login");
 		 System.out.println(" 2 for Seller login");
-		 System.out.println(" 1 for Buyer login"); 
+		 System.out.println(" 3 for Buyer login"); 
 		 
 		 System.out.println(" Enter number"); 
 		 

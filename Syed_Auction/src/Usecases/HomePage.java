@@ -189,11 +189,11 @@ public class HomePage {
 	        System.out.println("Enter Item's price"); 
 	        int price = sc.nextInt(); 
 	        
-	        System.out.println("Enter Item's status"); 
+	        System.out.println("Enter Item's status (write sold or Not_sold)"); 
 	          String status = sc.next();
 	        
 	        System.out.println("Enter Item's sellerid"); 
-	        int sellerid = sc.nextInt();
+	         int sellerid = sc.nextInt();
 	        
 	        
 	      
