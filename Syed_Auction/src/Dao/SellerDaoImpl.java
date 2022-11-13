@@ -155,7 +155,7 @@ public class SellerDaoImpl implements SellerDao {
 	}
 
 	@Override
-	public List<Items> soldItems(String status) throws SellerException {
+	public List<Items> soldItems() throws SellerException {
 	    
 		
 		List<Items> dtos = new ArrayList<>();
