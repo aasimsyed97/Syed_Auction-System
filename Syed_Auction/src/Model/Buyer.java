@@ -15,6 +15,9 @@ public class Buyer {
 		
 	}
 
+
+
+
 	public Buyer(int buyerid, String name, String username, String password) {
 		super();
 		Buyerid = buyerid;
@@ -22,7 +25,6 @@ public class Buyer {
 		this.username = username;
 		this.password = password;
 	}
-
 
 
 
@@ -79,12 +81,15 @@ public class Buyer {
 		this.password = password;
 	}
 
+
+
+
 	@Override
 	public String toString() {
 		return "Buyer [Buyerid=" + Buyerid + ", name=" + name + ", username=" + username + ", password=" + password
 				+ "]";
 	}
-	
+
 	
 
 }

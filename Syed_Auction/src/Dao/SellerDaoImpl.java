@@ -85,7 +85,7 @@ public class SellerDaoImpl implements SellerDao {
 	}
 
 	@Override
-	public String updateItemsForSell(int price, int quantity, int itemid) throws SellerException {
+	public String updateItemsForSell(int price, int quantity,int itemid) throws SellerException {
 		// TODO Auto-generated method stub
 		
 
@@ -122,7 +122,7 @@ public class SellerDaoImpl implements SellerDao {
 	}
 
 	@Override
-	public String removeItemsForSell(int itemid) throws SellerException {
+	public String removeItemsFromSellList(int itemid) throws SellerException {
 		// TODO Auto-generated method stub
 
 		String result = "Not removed"; 

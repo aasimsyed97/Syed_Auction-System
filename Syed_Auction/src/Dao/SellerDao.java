@@ -18,9 +18,9 @@ public interface SellerDao  {
 	
 	public String registerSeller(Seller seller)throws SellerException; 
     public String itemsforsell(Items item) throws SellerException;
-    public String updateItemsForSell(int price, int quantity,int itemid)throws SellerException;
+    public String updateItemsForSell(int price,int quantity,int itemid)throws SellerException;
 // public String insertItemsForSell(int itemid, String name, String category, int quantity, int price, String status, int sellerid)throw SellerException;  
-      public String removeItemsForSell( int itemid)throws SellerException;	  
+      public String removeItemsFromSellList( int itemid)throws SellerException;	  
 	 public List<Items> soldItems(String status) throws SellerException;
    
 }
