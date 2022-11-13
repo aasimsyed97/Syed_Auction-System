@@ -119,6 +119,12 @@ public class BuyerDaoImpl implements BuyerDao {
 			return dtos;
 		
 		
+	}
+
+	@Override
+	public List<Seller> getSellerList() throws BuyerException {
+		// TODO Auto-generated method stub
+		return null;
 	} 
 	
 	

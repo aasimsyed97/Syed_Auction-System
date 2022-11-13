@@ -14,6 +14,9 @@ import Model.Seller;
 
 public class AdminDaoImpl implements AdminDao{
 
+	
+	
+	
 	@Override
 	public List<Buyer> ViewRegisteredBuyer()throws AdminException {
 		// TODO Auto-generated method stub 
@@ -23,6 +26,7 @@ public class AdminDaoImpl implements AdminDao{
 		try ( Connection con = Utility.provideConnection(); ){
 		PreparedStatement	ps= con.prepareStatement("select * from Buyer");
 	     ResultSet rs = ps.executeQuery();
+	     
 	     while(rs.next()) { 
 	    	 Buyer dto = new Buyer();
 	    	 dto.setBuyerid(rs.getInt("Buyerid")); 
@@ -50,6 +54,10 @@ public class AdminDaoImpl implements AdminDao{
 	
 	}
 
+	
+	
+	
+	
 	@Override
 	public List<Seller> ViewRegisteredSeller() throws AdminException {
 		// TODO Auto-generated method stub 
@@ -83,6 +91,24 @@ public class AdminDaoImpl implements AdminDao{
 		
 		
 	
+	}
+
+	
+	
+	
+	
+	
+	
+	@Override
+	public List<Dispute> ViewDailyDiputeReport() throws AdminException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Report> viewDailyReportSelling() throws AdminException {
+		// TODO Auto-generated method stub
+		return null;
 	}
    
 
