@@ -8,9 +8,6 @@ import java.sql.SQLException;
 public class Utility {
 	
 
-	
-		
-		
 		public static Connection provideConnection() {
 			
 			Connection conn = null;
@@ -32,8 +29,6 @@ public class Utility {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			
 			
 			
 			return conn;

@@ -15,7 +15,7 @@ public interface AdminDao {
    
 	 public List<Buyer> ViewRegisteredBuyer()throws AdminException;
 	  public List<Seller>ViewRegisteredSeller()throws AdminException;
-	 //public List<Dispute>ViewDailyDiputeReport();
-    // public List<Report>viewDailyReportSelling();
+	 public List<Dispute>ViewDailyDiputeReport()throws AdminException;
+    public List<Report>viewDailyReportSelling()throws AdminException;
  
 }

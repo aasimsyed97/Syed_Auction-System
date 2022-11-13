@@ -17,14 +17,8 @@ public class Main {
 		// TODO Auto-generated method stub 
 		menu();
 		 
-//		
+		
 		 
-//		
-//		 HomePage home = new HomePage();
-//		  Buyer buyer = new Buyer();
-//		String res = home.registerBuyerUsecase(buyer);
-//		System.out.println(res);
-       
 	} 
 	
 	 public static void menu() {  

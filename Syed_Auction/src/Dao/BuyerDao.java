@@ -13,11 +13,17 @@ public interface BuyerDao {
 //	C. Select and view all the seller and also their Items category wise.
 //	D. Selects Items to buy. 
 	
-	  public String registerBuyer(Buyer buyer)throws BuyerException; 
+	 public String registerBuyer(Buyer buyer)throws BuyerException; 
+	 
+	 
 	 public List<Items> getItemsList(String category)throws BuyerException;
 	
-	public List <Items> getItemstoBuy(String status)throws BuyerException;
-	//public List<Seller> getSellerList()throws BuyerException;
+	
+	 
+	 public List <Items> getItemstoBuy(String status)throws BuyerException;
+	
+	 
+	 public List<Seller> getSellerList()throws BuyerException;
 
 
 }
