@@ -93,6 +93,37 @@ public class HomePage {
 		}
 		return ans;
 	 }
+	 
+	 
+	 public List<Items> getItemsListUsecase(String category){ 
+		 List<Items> dtos = null;
+		  BuyerDao dao = new BuyerDaoImpl(); 
+		  try {
+			dtos = dao.getItemsList(category);
+			
+		} catch (BuyerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace(); 
+			System.out.println(e.getMessage());
+		}
+		 return dtos;
+	 }
+	  
+	 
+	 public List <Items> getItemstoBuyUsecase(String status){ 
+		 List<Items> dtos = null;
+		  BuyerDao dao = new BuyerDaoImpl(); 
+		  try {
+			dtos = dao.getItemsList(status);
+			
+		} catch (BuyerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace(); 
+			System.out.println(e.getMessage());
+		}
+		 return dtos;
+	 }
+	 
 	
 	 
 	 
@@ -192,7 +223,7 @@ public class HomePage {
 	
 	 
 	 public String updateItemsForSellUseCase(int price, int quantity,int itemid) { 
- String ans = null; 
+              String ans = null; 
 		 
 //		 Scanner sc= new Scanner(System.in);   
 //		    
@@ -230,6 +261,52 @@ public class HomePage {
 	 
 	 
 	 
+	 public String removeItemsFromSellListUsecase( int itemid) { 
+	 String ans = null; 
+		 
+		 Scanner sc= new Scanner(System.in);   
+		    
+//	       System.out.println("Enter itemid "); 
+//	       int itemid = sc.nextInt();
+//	        
+	       
+	       Items item = new Items();
+	        
+	       item.setItemid(itemid);
+	      
+	       
+	       SellerDao dao = new SellerDaoImpl(); 
+	       
+	       try {
+			String result = dao.removeItemsFromSellList(itemid);
+			
+			  ans = result;
+			 
+			//System.out.println(result);
+			
+		} catch (SellerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return ans;
+	 }
+	 
+	 
+	 
+	 public List<Items> soldItemsUsecase(){ 
+		 List<Items> dtos = null;
+		  SellerDao dao = new SellerDaoImpl(); 
+		  try {
+			dtos = dao.soldItems();
+			
+		} catch (SellerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace(); 
+			System.out.println(e.getMessage());
+		}
+		 return dtos;
+	 }
+	                                                                 
 	  
 	 
 	 

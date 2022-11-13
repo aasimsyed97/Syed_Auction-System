@@ -15,9 +15,9 @@ public interface BuyerDao {
 	
 	  public String registerBuyer(Buyer buyer)throws BuyerException; 
 	 public List<Items> getItemsList(String category)throws BuyerException;
-	//public List<Seller> getSellerList()throws BuyerException;
-	public List <Items> getItemstoBuy(String status)throws BuyerException;
 	
+	public List <Items> getItemstoBuy(String status)throws BuyerException;
+	//public List<Seller> getSellerList()throws BuyerException;
 
 
 }

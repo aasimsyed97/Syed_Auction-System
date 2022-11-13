@@ -7,6 +7,7 @@ import Dao.BuyerDao;
 import Dao.BuyerDaoImpl;
 import Exceptions.BuyerException;
 import Model.Buyer;
+import Model.Items;
 import Model.Seller;
 
 public class Main {
@@ -105,23 +106,149 @@ public class Main {
 		  //Seller methods
 		  else if(a==2)
 		  { 
-			  
-			  System.out.println(" 1 : Enlist Items for sell");
-			  System.out.println(" 2 : Update Price and quantity of Item");
-			  System.out.println(" 3 : Remove Item from the list");
-			  System.out.println(" 4 : veiw sold items");
-				 System.out.println(" 5 Homepage");
+			  System.out.println(" 1 : Register as new Seller");
+			  System.out.println(" 2 : Enlist Items for sell");
+			  System.out.println(" 3 : Update Price and quantity of Item");
+			  System.out.println(" 4 : Remove Item from the list");
+			  System.out.println(" 5 : veiw sold items");
+				 System.out.println(" 6 Homepage");
 				 
 				 System.out.println(" Enter Number"); 
 				 
 				  int b = sc.nextInt(); 
 				   if(b==1) { 
+					   Seller seller = new Seller();
+					  String result =  home.registerSellerUsecase(seller); 
+					  System.out.println(result); 
+					  
+					  System.out.println(" Enter 0 for Home page "); 
+						 
+					  int c = sc.nextInt();  
+					   if(c==0) { 
+						  menu();
+					  }
+				   }
+				   else if (b==2)
+				   {
+					  Items item = new Items(); 
+					  String result =  home.ItemsforSellUsecase(item); 
+					  System.out.println(result); 
+					  System.out.println(" Enter 0 for Home page "); 
 					   
+					  int c = sc.nextInt();  
+					   if(c==0) { 
+						  menu();
+					  }
+					 
+				   }
+				   else if (b==3)
+				   {
+					  
+				       System.out.println("Enter updated price"); 
+				       int price= sc.nextInt();
+				        
+				        System.out.println("Enter updated quantity"); 
+				          int quantity = sc.nextInt();
+				          
+				          System.out.println("Enter itemid to be updated"); 
+				           int itemid = sc.nextInt(); 
+					    
+				         String result =   home.updateItemsForSellUseCase(price, quantity, itemid);
+				           System.out.println(result); 
+				           System.out.println(" Enter 0 for Home page "); 
+				           int c = sc.nextInt();  
+						   if(c==0) { 
+							  menu();
+						  }
+				           
+				   }
+				   else if (b==4)
+				   {
+					   
+				       System.out.println("Enter itemid "); 
+			             int itemid = sc.nextInt();  
+			             String result = home.removeItemsFromSellListUsecase(itemid);
+			             System.out.println(result);
+			             System.out.println(" Enter 0 for Home page "); 
+			             int c = sc.nextInt();  
+						   if(c==0) { 
+							  menu();
+						  }
+				   }
+				   else if (b==5)
+				   {
+					List<Items> dtos = home.soldItemsUsecase();
+					dtos.forEach(dto->System.out.println(dto)); 
+					  System.out.println(" Enter 0 for Home page "); 
+					int c = sc.nextInt();  
+					   if(c==0) { 
+						  menu();
+					  }
+			           
+				         
+				   }
+				   else if (b==6)
+				   {
+					   menu();
 				   }
 			 		  }
 		  else if(a==3)
 		  { 
-			  System.out.println("hello aasim3");
+			  System.out.println(" 1 : Register as new Buyer");
+			  System.out.println(" 2 : Get Items List");
+			  System.out.println(" 3 : Get Items availabe to buy");
+			 
+				 System.out.println(" 4 Homepage");
+				 
+				 System.out.println(" Enter Number"); 
+				 
+				  int b = sc.nextInt(); 
+				   if(b==1) { 
+					   Buyer buyer = new Buyer();
+					  String result =  home.registerBuyerUsecase(buyer);
+					  System.out.println(result); 
+					  
+					  System.out.println(" Enter 0 for Home page "); 
+						 
+					  int c = sc.nextInt();  
+					   if(c==0) { 
+						  menu();
+					  }
+				   } 
+				   else if (b==2)
+				   {
+					   System.out.println(" Enter category of items "); 
+					   String category = sc.next();
+					  List<Items> dtos = home.getItemsListUsecase(category);  
+					  dtos.forEach(dto->System.out.println(dto));
+					  
+						
+						  System.out.println(" Enter 0 for Home page "); 
+							 
+						  int c = sc.nextInt();  
+						   if(c==0) { 
+							  menu();
+						  }
+				   }
+				   else if (b==3)
+				   {
+					   System.out.println(" Enter category of items "); 
+					   String status = sc.next();
+					   List<Items> dtos = home.getItemstoBuyUsecase(status);  
+					   dtos.forEach(dto->System.out.println(dto));
+						  
+						
+						  System.out.println(" Enter 0 for Home page "); 
+							 
+						  int c = sc.nextInt();  
+						   if(c==0) { 
+							  menu();
+						  }
+				   }
+				   else if (b==4)
+				   {
+					   menu();
+				   }
 		  } 
 		  else { 
 			  System.out.println("Invalid number"); 
