@@ -43,7 +43,7 @@ public class Main {
 			  System.out.println(" 1 : veiw registered Buyers list");
 			  System.out.println(" 2 : veiw registered Sellers list");
 			  System.out.println(" 3 : veiw daily dispute report");
-			  System.out.println(" 4 : veiw daily Selling report");
+//			  System.out.println(" 4 : veiw daily Selling report");
 				 System.out.println(" 5 Homepage");
 				 
 				 System.out.println(" Enter Number"); 
@@ -226,7 +226,7 @@ public class Main {
 				   }
 				   else if (b==3)
 				   {
-					   System.out.println(" Enter category of items "); 
+					   System.out.println(" Enter status of items "); 
 					   String status = sc.next();
 					   List<Items> dtos = home.getItemstoBuyUsecase(status);  
 					   dtos.forEach(dto->System.out.println(dto));

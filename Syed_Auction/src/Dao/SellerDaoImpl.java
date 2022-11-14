@@ -133,7 +133,7 @@ public class SellerDaoImpl implements SellerDao {
 		PreparedStatement	ps = con.prepareStatement("delete from items where itemid=?");
 			      
 	
-		  ps.setInt(3, itemid);  
+		  ps.setInt(1, itemid);  
 		
 		  
 		  int x = ps.executeUpdate();
@@ -163,7 +163,8 @@ public class SellerDaoImpl implements SellerDao {
 		
 		try ( Connection con = Utility.provideConnection(); ){
 		PreparedStatement	ps= con.prepareStatement("select * from Items where status=sold");
-	     ResultSet rs = ps.executeQuery();
+	   
+		ResultSet rs = ps.executeQuery();
 	     while(rs.next()) { 
 	    	 Items dto = new Items();
 	    	 
